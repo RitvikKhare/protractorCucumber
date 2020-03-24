@@ -1,0 +1,117 @@
+[
+  {
+    "description": "   Feature Description: Trying to launch Browser",
+    "keyword": "Feature",
+    "name": "Test Protractor BrowserLaunch",
+    "line": 1,
+    "id": "test-protractor-browserlaunch",
+    "tags": [],
+    "uri": "tsScripts\\features\\firstProtractor.feature",
+    "elements": [
+      {
+        "id": "test-protractor-browserlaunch;perform-modulo-of-numbers-with-calculator",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Perform Modulo of Numbers with Calculator",
+        "tags": [
+          {
+            "name": "@ProtractorTest",
+            "line": 5
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Super Calculator Website is opened browser",
+            "match": {
+              "location": "tsScripts\\stepsDefinition\\firstProtractor.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5975000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Enter number 43 in First Box",
+            "match": {
+              "location": "tsScripts\\stepsDefinition\\firstProtractor.steps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1160000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Select Modulo operator from dropdown",
+            "match": {
+              "location": "tsScripts\\stepsDefinition\\firstProtractor.steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Enter number 40 in Second Box",
+            "match": {
+              "location": "tsScripts\\stepsDefinition\\firstProtractor.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1101000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "Click Go button",
+            "match": {
+              "location": "tsScripts\\stepsDefinition\\firstProtractor.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 168000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Answer Displayed is 3",
+            "match": {
+              "location": "tsScripts\\stepsDefinition\\firstProtractor.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2933000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "name": "protractorcucumber",
+  "version": "1.0.0",
+  "description": "Test Cumcumberjs with protractor",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "execute-test": "./node_modules/.bin/cucumber-js --format json | tee ./report/output.json",
+    "execute-cucumber": "protractor ./tsScripts/compiledJS/protractor_config_cucumber.js",
+    "gen-cucumber-html": "node ./tsScripts/reports/index.js",
+    "build-cucumber": "tsc --build ./tsScripts/tsconfig.json",
+    "protractor": "./node_modules/protractor/built/cli.js",
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+  },
+
+  "keywords": [
+    "cucumberjs",
+    "protractor"
+  ],
+  "author": "Puneet",
+  "license": "ISC",
+
+  "dependencies": {
+    "protractor": "^5.4.1",
+    "typescript": "^3.6.4",
+    "ts-node": "8.5.4",
+    "@types/node": "^8.10.59",
+    "protractor-cucumber-framework": "^6.1.3",
+    "cucumber": "^5.1.0",
+    "cucumber-pretty": "^1.5.0",
+    "@types/cucumber": "^6.0.0",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.0.2",
+    "@types/node": "^8.10.59"
+  }
+}
