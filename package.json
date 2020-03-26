@@ -2,7 +2,6 @@
   "name": "protractorcucumber",
   "version": "1.0.0",
   "description": "To test the mouse actions with protractor",
-  "main": "MouseMoveSpec.js",
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,8 +11,8 @@
     "build-cucumber": "tsc --build ./tsScripts/tsconfig.json",
     "protractor": "./node_modules/protractor/built/cli.js",
     "webdriver-update": "./node_modules/.bin/webdriver-manager update",
-    "execute-jasmine": "protractor ./mouseoperations/Spec/js/MouseMoveSpec.js",
-    "build-jasmine": "tsc --build ./mouseoperations/Spec/tsconfig.json"
+    "execute-jasmine": "protractor ./mouseoperations/specs/js/protractor_config_jasmine.js",
+    "build-jasmine": "tsc --build ./mouseoperations/specs/tsconfig.json"
   },
 
   "keywords": [
