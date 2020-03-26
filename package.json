@@ -1,8 +1,8 @@
 {
   "name": "protractorcucumber",
   "version": "1.0.0",
-  "description": "Test Cumcumberjs with protractor",
-  "main": "index.js",
+  "description": "To test the mouse actions with protractor",
+  "main": "MouseMoveSpec.js",
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,12 +11,15 @@
     "gen-cucumber-html": "node ./tsScripts/reports/index.js",
     "build-cucumber": "tsc --build ./tsScripts/tsconfig.json",
     "protractor": "./node_modules/protractor/built/cli.js",
-    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update",
+    "execute-jasmine": "protractor ./mouseoperations/Spec/js/MouseMoveSpec.js",
+    "build-jasmine": "tsc --build ./mouseoperations/Spec/tsconfig.json"
   },
 
   "keywords": [
     "cucumberjs",
-    "protractor"
+    "protractor",
+    "jasmine"
   ],
   "author": "Puneet",
   "license": "ISC",
@@ -31,7 +34,10 @@
     "cucumber-pretty": "^1.5.0",
     "@types/cucumber": "^6.0.0",
     "node-fetch": "^2.6.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "jasmine": "^3.5.0",
+    "@types/jasmine": "^3.5.0",
+    "@types/jasminewd2": "^2.0.8"
   },
   "devDependencies": {
     "cucumber-html-reporter": "^5.0.2",
