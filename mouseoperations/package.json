@@ -1,0 +1,20 @@
+{
+  "name": "mouseoperations",
+  "version": "1.0.0",
+  "description": "To test the mouse actions with protractor",
+  "scripts": {
+    "execute-jasmine": "protractor ./specs/js/protractor_config_jasmine.js",
+    "build-jasmine": "tsc --build ./specs/tsconfig.json",
+    "protractor": "./node_modules/protractor/built/cli.js",
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+  },
+  "keywords": [
+    "jasmine",
+    "protractor"
+  ],
+  "author": "Puneet",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  }
+}

@@ -13,11 +13,11 @@ export let config: Config ={
     // Spec patterns are relative to the current working directory when
     // protractor is called.
     specs: [
-      'mouseMovespec.js'
+      'mouseMoveSpec.js'
     ],
   
     // Options to be passed to Jasmine.
-    //jasmineNodeOpts: {
-    //  defaultTimeoutInterval: 30000
-    //}
+    jasmineNodeOpts: {
+      defaultTimeoutInterval: 30000
+    }
   };
