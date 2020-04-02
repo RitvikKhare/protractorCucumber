@@ -1,14 +1,15 @@
 {
   "name": "protractorcucumber",
   "version": "1.0.0",
-  "description": "To test the mouse actions with protractor",
+  "description": "To test the functionalities of cucumber with protractor",
+  "main": "index.js",
   
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "execute-test": "./node_modules/.bin/cucumber-js --format json | tee ./report/output.json",
-    "execute-cucumber": "protractor ./tsScripts/compiledJS/protractor_config_cucumber.js",
-    "gen-cucumber-html": "node ./tsScripts/reports/index.js",
-    "build-cucumber": "tsc --build ./tsScripts/tsconfig.json",
+    "execute-cucumber": "protractor ./scenariooutline/tsScripts/compiledJS/protractor_config_cucumber.js",
+    "gen-cucumber-html": "node ./scenariooutline/tsScripts/reports/index.js",
+    "build-cucumber": "tsc --build ./scenariooutline/tsScripts/tsconfig.json",
     "protractor": "./node_modules/protractor/built/cli.js",
     "webdriver-update": "./node_modules/.bin/webdriver-manager update",
     "execute-jasmine": "protractor ./mouseoperations/specs/js/protractor_config_jasmine.js",
