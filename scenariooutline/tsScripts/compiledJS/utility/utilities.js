@@ -1,0 +1,10 @@
+var fs = require('fs');
+var myObj;
+// Handle the data 
+let handleJSONFile = function (err, data) {
+    if (err) {
+        throw err;
+    }
+    myObj = JSON.parse(data);
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbGl0aWVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vdXRpbGl0eS91dGlsaXRpZXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSSxFQUFFLEdBQUcsT0FBTyxDQUFDLElBQUksQ0FBQyxDQUFDO0FBQ3ZCLElBQUksS0FBSyxDQUFDO0FBR1YsbUJBQW1CO0FBQ25CLElBQUksY0FBYyxHQUFHLFVBQVUsR0FBRyxFQUFFLElBQUk7SUFDcEMsSUFBSSxHQUFHLEVBQUU7UUFDTCxNQUFNLEdBQUcsQ0FBQztLQUNiO0lBQ0QsS0FBSyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7QUFDN0IsQ0FBQyxDQUFBIn0=

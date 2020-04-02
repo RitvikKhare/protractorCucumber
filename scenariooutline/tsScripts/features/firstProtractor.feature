@@ -2,28 +2,16 @@ Feature: Test Protractor BrowserLaunch
 
    Feature Description: Trying to launch Browser
 
-   Scenario: Perform Multiplication of Numbers with Calculator
-   Given Super Calculator Website is opened browser as
-   When Enter number 15 in First Box
-   When Select Multiply operator from dropdown
-   When Enter number 12 in Second Box
+   Scenario Outline: Perform Specific operation with Calculator
+   Given Super Calculator Website is opened browser <temp>
+   When Enter number <firstNum> in First Box
+   When Select <Operator> operator from dropdown
+   When Enter number <secondNum> in Second Box
    When Click Go button
-   Then Answer Displayed is 180
+   Then Answer Displayed is <answerNum>
 
-   Scenario: Perform Modulo of Numbers with Calculator
-   Given Super Calculator Website is opened browser
-   When Enter number 38 in First Box
-   When Select Modulo operator from dropdown
-   When Enter number 32 in Second Box
-   When Click Go button
-   Then Answer Displayed is 6
-
-   Scenario: Perform Division of Numbers with Calculator
-   Given Super Calculator Website is opened browser
-   When Enter number 25 in First Box
-   When Select Divide operator from dropdown
-   When Enter number 5 in Second Box
-   When Click Go button
-   Then Answer Displayed is 5
-
-
+   Examples:
+  |temp | firstNum | Operator | secondNum | answerNum |
+  | as  |    15    | Multiply |    12     |    180    |
+  | in  |    38    |  Modulo  |    32     |     6     |
+  | in  |    25    |  Divide  |     5     |     5     |

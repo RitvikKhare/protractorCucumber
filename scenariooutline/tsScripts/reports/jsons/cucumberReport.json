@@ -1,0 +1,310 @@
+[
+  {
+    "description": "   Feature Description: Trying to launch Browser",
+    "keyword": "Feature",
+    "name": "Test Protractor BrowserLaunch",
+    "line": 1,
+    "id": "test-protractor-browserlaunch",
+    "tags": [],
+    "uri": "scenariooutline\\tsScripts\\features\\firstProtractor.feature",
+    "elements": [
+      {
+        "id": "test-protractor-browserlaunch;perform-specific-operation-with-calculator",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Perform Specific operation with Calculator",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Super Calculator Website is opened browser as",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2470000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Enter number 15 in First Box",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1410000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Select Multiply operator from dropdown",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\separate.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Enter number 12 in Second Box",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1211000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Click Go button",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 127000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Answer Displayed is 180",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "test-protractor-browserlaunch;perform-specific-operation-with-calculator",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Perform Specific operation with Calculator",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Super Calculator Website is opened browser in",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\separate.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Enter number 38 in First Box",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2866000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Select Modulo operator from dropdown",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\separate.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Enter number 32 in Second Box",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1102000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Click Go button",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Answer Displayed is 6",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "test-protractor-browserlaunch;perform-specific-operation-with-calculator",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Perform Specific operation with Calculator",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Super Calculator Website is opened browser in",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\separate.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Enter number 25 in First Box",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2934000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Select Divide operator from dropdown",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\separate.steps.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Enter number 5 in Second Box",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1089000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Click Go button",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Answer Displayed is 5",
+            "match": {
+              "location": "scenariooutline\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -18,10 +18,11 @@ export let config: Config =
     ],
     
     cucumberOpts: {
-     // format:'json:./tsScripts/reports/jsons/cucumberReport.json',
+      format:'json:./scenariooutline/tsScripts/reports/jsons/cucumberReport.json',
 
       require: [
         './stepsDefinition/*.js'
       ]
     }    
   };
+  
