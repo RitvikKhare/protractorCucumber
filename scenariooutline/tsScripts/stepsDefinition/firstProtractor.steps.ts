@@ -1,11 +1,12 @@
-import {Given,When,Then} from 'cucumber'
+import {Given,When,Then, After, AfterAll, BeforeAll, Before} from 'cucumber'
 import {browser,element,by} from 'protractor'
 
-Given('Super Calculator Website is opened browser as', async function () {
-   await browser.get('http://juliemr.github.io/protractor-demo/').then(async function()
- 			{
-   	     await console.log("[1] Step to execute after URL Launch | Once Promise is resolved. ");
-       });
+BeforeAll(async function(){
+  await browser.get('http://juliemr.github.io/protractor-demo/');
+});
+
+Given('Super Calculator Website is opened browser', async function () {
+   	await console.log("[1] Step to execute after URL Launch | Once Promise is resolved. ");
  });
 
   When('Enter number {int} in First Box', async function (firstNum) {
@@ -13,7 +14,6 @@ Given('Super Calculator Website is opened browser as', async function () {
       browser.sleep(1000);
      await console.log("[2] Entered first number.");
    });
-
   });
 
   When('Enter number {int} in Second Box', async function (secondNum) {
@@ -32,3 +32,8 @@ Given('Super Calculator Website is opened browser as', async function () {
   Then('Answer Displayed is {int}', async function (answerNum){
      await console.log("[6] Answer Displayed");
   });
+
+  After(async function () {
+        let screenShot= await browser.takeScreenshot();
+        this.attach(screenShot, "image/png");
+});
