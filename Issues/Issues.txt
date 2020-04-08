@@ -1,0 +1,7 @@
+Issues in Scenario outline folder in  tsScripts in step definition
+
+1. Switch statement not working in When function
+   Error- Undefined when function
+
+2. Javascript executor function not working placed in After function
+   Error- Click control problem in between go button and executor function.
