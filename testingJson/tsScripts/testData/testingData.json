@@ -1,0 +1,22 @@
+{
+    "Test Protractor BrowserLaunch":{
+       "Scenario1":{
+            "firstNum":"15",
+            "Operator":"Multiply",
+            "secondNum":"12",
+            "answerNum":"180"
+         },
+       "Scenario2":{
+            "firstNum":"38",
+            "Operator":"Modulo",
+            "secondNum":"32",
+            "answerNum":"6"
+         },
+       "Scenario3":{
+            "firstNum":"25",
+            "Operator":"Divide",
+            "secondNum":"5",
+            "answerNum":"5"
+         }
+    }
+}
