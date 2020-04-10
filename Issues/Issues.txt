@@ -2,3 +2,7 @@ Issues in Scenario outline folder in  tsScripts in step definition
 
 1. Javascript executor function not working placed in After function
    Error- Click control problem in between go button and executor function.
+
+Issues in testingJson folder in tsScripts
+
+1. Showing zero scenarios still after adding testingData.json file and utilities.ts file.
