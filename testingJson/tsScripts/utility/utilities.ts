@@ -13,5 +13,5 @@ export class GetJson {
 }
 }
 
-let obj = new GetJson();
-obj.readJsonFile('../testingJson/tsScripts/testData/testingData.json');
+//let obj = new GetJson();
+//obj.readJsonFile('../protractorCucumber/testingJson/tsScripts/testData/firstProtractor.json');

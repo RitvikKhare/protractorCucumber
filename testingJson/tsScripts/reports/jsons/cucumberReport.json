@@ -1,1 +1,120 @@
-[]
+[
+  {
+    "description": "   Feature Description: Trying to launch Browser",
+    "keyword": "Feature",
+    "name": "FeatureCalculator",
+    "line": 1,
+    "id": "featurecalculator",
+    "tags": [],
+    "uri": "testingJson\\tsScripts\\features\\firstProtractor.feature",
+    "elements": [
+      {
+        "id": "featurecalculator;multiplyscenario",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "MultiplyScenario",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Super Calculator Website is opened browser",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "Enter first number in First Box",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:21"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3000000,
+              "error_message": "Error: function uses multiple asynchronous interfaces: callback and promise\nto use the callback interface: do not return a promise\nto use the promise interface: remove the last argument to the function\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:56:18\n    at Generator.next (<anonymous>)\n    at asyncGeneratorStep (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:18:103)\n    at _next (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:20:194)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:20:364\n    at new Promise (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:20:97\n    at Function.run (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:109:7)\n    at Object.<anonymous> (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\runtime\\step_runner.js:59:54)\n    at Generator.next (<anonymous>)\n    at asyncGeneratorStep (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\runtime\\step_runner.js:20:103)\n    at _next (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\runtime\\step_runner.js:22:194)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "Select operator from dropdown",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:29"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "Enter second number in Second Box",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:35"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "Click Go button",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:42"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Answer is Displayed",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:48"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

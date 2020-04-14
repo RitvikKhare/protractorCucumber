@@ -1,0 +1,10 @@
+{
+    "FeatureCalculator":{
+       "MultiplyScenario":{
+            "firstNum":"15",
+            "Operator":"Multiply",
+            "secondNum":"12",
+            "answerNum":"180"
+         }
+    }
+}
