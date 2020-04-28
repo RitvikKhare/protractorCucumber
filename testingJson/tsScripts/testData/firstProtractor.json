@@ -5,6 +5,18 @@
             "Operator":"Multiply",
             "secondNum":"12",
             "answerNum":"180"
+         },
+       "ModuloScenario":{
+            "firstNum":"38",
+            "Operator":"Modulo",
+            "secondNum":"32",
+            "answerNum":"6"
+         },
+       "DivideScenario":{
+            "firstNum":"25",
+            "Operator":"Divide",
+            "secondNum":"5",
+            "answerNum":"5"
          }
     }
 }

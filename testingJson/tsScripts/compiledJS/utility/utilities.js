@@ -11,20 +11,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs = require('fs');
 class GetJson {
-    // Read the file, and pass it to your callback
     readJsonFile(filePath) {
         return __awaiter(this, void 0, void 0, function* () {
-            yield fs.readFile(filePath, (err, data) => __awaiter(this, void 0, void 0, function* () {
-                if (err)
-                    throw err;
-                let jsonContent = yield JSON.parse(data);
-                yield console.log("filePath " + filePath + " | content");
-                yield console.log(jsonContent);
-            }));
+            yield console.log('filepath ' + filePath);
+            let fileContent = yield fs.readFileSync(filePath);
+            let jsonContent = yield JSON.parse(fileContent);
+            return fileContent;
         });
     }
 }
 exports.GetJson = GetJson;
-//let obj = new GetJson();
-//obj.readJsonFile('../protractorCucumber/testingJson/tsScripts/testData/firstProtractor.json');
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbGl0aWVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vdXRpbGl0eS91dGlsaXRpZXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBQSxNQUFNLEVBQUUsR0FBRyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7QUFFekIsTUFBYSxPQUFPO0lBRXBCLDhDQUE4QztJQUN2QyxZQUFZLENBQUUsUUFBZTs7WUFDL0IsTUFBTSxFQUFFLENBQUMsUUFBUSxDQUFDLFFBQVEsRUFBRSxDQUFPLEdBQUcsRUFBRSxJQUFJLEVBQUUsRUFBRTtnQkFDL0MsSUFBSSxHQUFHO29CQUFFLE1BQU0sR0FBRyxDQUFDO2dCQUNuQixJQUFJLFdBQVcsR0FBRyxNQUFNLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBQ3pDLE1BQU0sT0FBTyxDQUFDLEdBQUcsQ0FBQyxXQUFXLEdBQUcsUUFBUSxHQUFHLFlBQVksQ0FBQyxDQUFDO2dCQUN6RCxNQUFNLE9BQU8sQ0FBQyxHQUFHLENBQUMsV0FBVyxDQUFDLENBQUM7WUFDbkMsQ0FBQyxDQUFBLENBQUMsQ0FBQztRQUNMLENBQUM7S0FBQTtDQUNBO0FBWEQsMEJBV0M7QUFFRCwwQkFBMEI7QUFDMUIsZ0dBQWdHIn0=
+;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbGl0aWVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vdXRpbGl0eS91dGlsaXRpZXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFFQSxNQUFNLEVBQUUsR0FBRyxPQUFPLENBQUMsSUFBSSxDQUFDLENBQUM7QUFFekIsTUFBYSxPQUFPO0lBRWQsWUFBWSxDQUFFLFFBQWU7O1lBQ2pDLE1BQU0sT0FBTyxDQUFDLEdBQUcsQ0FBQyxXQUFXLEdBQUcsUUFBUSxDQUFDLENBQUM7WUFDMUMsSUFBSSxXQUFXLEdBQVUsTUFBTSxFQUFFLENBQUMsWUFBWSxDQUFDLFFBQVEsQ0FBQyxDQUFDO1lBQ3pELElBQUksV0FBVyxHQUFHLE1BQU0sSUFBSSxDQUFDLEtBQUssQ0FBQyxXQUFXLENBQUMsQ0FBQztZQUNoRCxPQUFPLFdBQVcsQ0FBQztRQUNyQixDQUFDO0tBQUE7Q0FDQTtBQVJELDBCQVFDO0FBQUEsQ0FBQyJ9

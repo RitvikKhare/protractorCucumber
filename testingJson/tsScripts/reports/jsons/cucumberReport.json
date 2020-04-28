@@ -20,11 +20,11 @@
             "keyword": "Before",
             "hidden": true,
             "match": {
-              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:10"
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 25000000
             }
           },
           {
@@ -33,11 +33,11 @@
             "line": 6,
             "name": "Super Calculator Website is opened browser",
             "match": {
-              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:17"
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 2000000
             }
           },
           {
@@ -46,12 +46,12 @@
             "line": 7,
             "name": "Enter first number in First Box",
             "match": {
-              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:21"
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:41"
             },
             "result": {
               "status": "failed",
-              "duration": 3000000,
-              "error_message": "Error: function uses multiple asynchronous interfaces: callback and promise\nto use the callback interface: do not return a promise\nto use the promise interface: remove the last argument to the function\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:56:18\n    at Generator.next (<anonymous>)\n    at asyncGeneratorStep (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:18:103)\n    at _next (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:20:194)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:20:364\n    at new Promise (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:20:97\n    at Function.run (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\user_code_runner.js:109:7)\n    at Object.<anonymous> (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\runtime\\step_runner.js:59:54)\n    at Generator.next (<anonymous>)\n    at asyncGeneratorStep (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\runtime\\step_runner.js:20:103)\n    at _next (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\cucumber\\lib\\runtime\\step_runner.js:22:194)"
+              "duration": 198000000,
+              "error_message": "TypeError: each key must be a number of string; got undefined\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2162:21\n    at Array.forEach (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2157:16\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\nFrom: Task: WebElement.sendKeys()\n    at Driver.schedule (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:807:17)\n    at WebElement.schedule_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2010:25)\n    at WebElement.sendKeys (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2174:19)\n    at actionFn (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:89:44)\n    at Array.map (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:461:65\n    at ManagedPromise.invokeCallback_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:1376:14)\n    at TaskQueue.execute_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:3084:14)\n    at TaskQueue.executeNext_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:3067:27)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:2927:27\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:668:7\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)Error\n    at ElementArrayFinder.applyAction_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:459:27)\n    at ElementArrayFinder.<computed> [as sendKeys] (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:91:29)\n    at ElementFinder.<computed> [as sendKeys] (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:831:22)\n    at World.<anonymous> (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:42:38)\n    at Generator.next (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:4:12)\n    at World.<anonymous> (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:51:12)"
             }
           },
           {
@@ -60,7 +60,7 @@
             "line": 8,
             "name": "Select operator from dropdown",
             "match": {
-              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:29"
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:48"
             },
             "result": {
               "status": "skipped"
@@ -72,7 +72,7 @@
             "line": 9,
             "name": "Enter second number in Second Box",
             "match": {
-              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:35"
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:54"
             },
             "result": {
               "status": "skipped"
@@ -84,7 +84,7 @@
             "line": 10,
             "name": "Click Go button",
             "match": {
-              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:42"
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:61"
             },
             "result": {
               "status": "skipped"
@@ -96,7 +96,221 @@
             "line": 11,
             "name": "Answer is Displayed",
             "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:67"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "featurecalculator;moduloscenario",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "ModuloScenario",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "Super Calculator Website is opened browser",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "Enter first number in First Box",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:41"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 127000000,
+              "error_message": "TypeError: each key must be a number of string; got undefined\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2162:21\n    at Array.forEach (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2157:16\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\nFrom: Task: WebElement.sendKeys()\n    at Driver.schedule (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:807:17)\n    at WebElement.schedule_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2010:25)\n    at WebElement.sendKeys (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2174:19)\n    at actionFn (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:89:44)\n    at Array.map (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:461:65\n    at ManagedPromise.invokeCallback_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:1376:14)\n    at TaskQueue.execute_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:3084:14)\n    at TaskQueue.executeNext_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:3067:27)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:2927:27\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:668:7\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)Error\n    at ElementArrayFinder.applyAction_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:459:27)\n    at ElementArrayFinder.<computed> [as sendKeys] (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:91:29)\n    at ElementFinder.<computed> [as sendKeys] (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:831:22)\n    at World.<anonymous> (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:42:38)\n    at Generator.next (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:4:12)\n    at World.<anonymous> (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:51:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "Select operator from dropdown",
+            "match": {
               "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:48"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "Enter second number in Second Box",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:54"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "Click Go button",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:61"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "Answer is Displayed",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:67"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "featurecalculator;dividescenario",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "DivideScenario",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "Super Calculator Website is opened browser",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "Enter first number in First Box",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:41"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 226000000,
+              "error_message": "TypeError: each key must be a number of string; got undefined\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2162:21\n    at Array.forEach (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2157:16\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)\nFrom: Task: WebElement.sendKeys()\n    at Driver.schedule (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:807:17)\n    at WebElement.schedule_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2010:25)\n    at WebElement.sendKeys (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\webdriver.js:2174:19)\n    at actionFn (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:89:44)\n    at Array.map (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:461:65\n    at ManagedPromise.invokeCallback_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:1376:14)\n    at TaskQueue.execute_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:3084:14)\n    at TaskQueue.executeNext_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:3067:27)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:2927:27\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\selenium-webdriver\\lib\\promise.js:668:7\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)Error\n    at ElementArrayFinder.applyAction_ (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:459:27)\n    at ElementArrayFinder.<computed> [as sendKeys] (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:91:29)\n    at ElementFinder.<computed> [as sendKeys] (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\node_modules\\protractor\\built\\element.js:831:22)\n    at World.<anonymous> (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:42:38)\n    at Generator.next (<anonymous>)\n    at C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:4:12)\n    at World.<anonymous> (C:\\Users\\puneet.dewani\\Desktop\\Initial Tasks\\Code Practice\\protractorCucumber\\testingJson\\tsScripts\\compiledJS\\stepsDefinition\\firstProtractor.steps.js:51:12)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "Select operator from dropdown",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:48"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "Enter second number in Second Box",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:54"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "Click Go button",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:61"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "Answer is Displayed",
+            "match": {
+              "location": "testingJson\\tsScripts\\stepsDefinition\\firstProtractor.steps.ts:67"
             },
             "result": {
               "status": "skipped"
