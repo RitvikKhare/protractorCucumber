@@ -12,35 +12,29 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const cucumber_1 = require("cucumber");
 const protractor_1 = require("protractor");
 const utilities_1 = require("../utility/utilities");
-var scenario1, scenario2, scenario3;
-var firstValue, secondValue, answerValue;
-var i = 0;
-// var item=0;
+var jsonData;
+var key1;
+var key2;
+var jsonst = '';
+var featureName;
+var scenarioName;
+var firstValue;
+var operatorString;
+var secondValue;
 cucumber_1.BeforeAll(function () {
     return __awaiter(this, void 0, void 0, function* () {
         yield protractor_1.browser.get('http://juliemr.github.io/protractor-demo/');
+        let obj = new utilities_1.GetJson();
+        jsonst = yield obj.readJsonFile('../protractorCucumber/testingJson/tsScripts/testData/firstProtractor.json');
+        jsonData = JSON.parse(jsonst);
     });
 });
-cucumber_1.Before(function () {
-    return __awaiter(this, void 0, void 0, function* () {
-        let obj = new utilities_1.GetJson();
-        var jsonst = yield obj.readJsonFile('../protractorCucumber/testingJson/tsScripts/testData/firstProtractor.json');
-        let cd = JSON.parse(jsonst);
-        scenario1 = cd.FeatureCalculator.MultiplyScenario;
-        scenario2 = cd.FeatureCalculator.ModuloScenario;
-        scenario3 = cd.FeatureCalculator.DivideScenario;
-        let scenarios = [scenario1, scenario2, scenario3];
-        for (let item of scenarios) {
-            console.log("firstValue = " + item.firstNum);
-            console.log("secondValue = " + item.secondNum);
-            console.log("answerValue = " + item.answerNum);
-            //console.log("firstValue = " + scenarios[item].firstNum);
-            //console.log("secondValue = " + scenarios[item].secondNum);
-            //console.log("answerValue = " + scenarios[item].answerNum);
-            item++;
-            break;
-        }
-    });
+cucumber_1.Before((scenario) => {
+    featureName = "FeatureCalculator";
+    scenarioName = scenario.pickle.name;
+    console.log(scenarioName);
+    key1 = jsonData[featureName];
+    key2 = key1[scenarioName];
 });
 cucumber_1.Given('Super Calculator Website is opened browser', function () {
     return __awaiter(this, void 0, void 0, function* () {
@@ -49,9 +43,10 @@ cucumber_1.Given('Super Calculator Website is opened browser', function () {
 });
 cucumber_1.When('Enter first number in First Box', function () {
     return __awaiter(this, void 0, void 0, function* () {
+        firstValue = key2["firstNum"];
         yield protractor_1.element(protractor_1.by.model('first')).sendKeys(firstValue).then(function () {
             return __awaiter(this, void 0, void 0, function* () {
-                protractor_1.browser.sleep(1000);
+                yield protractor_1.browser.sleep(1000);
                 yield console.log("[2] Entered first number.");
             });
         });
@@ -59,7 +54,20 @@ cucumber_1.When('Enter first number in First Box', function () {
 });
 cucumber_1.When('Select operator from dropdown', function () {
     return __awaiter(this, void 0, void 0, function* () {
-        yield protractor_1.element(protractor_1.by.model('operator')).element(protractor_1.by.css("option:nth-child(4)")).click().then(function () {
+        let operatorCSS = "";
+        operatorString = key2["Operator"];
+        switch (operatorString) {
+            case "Multiply":
+                operatorCSS = "option:nth-child(4)";
+                break;
+            case "Modulo":
+                operatorCSS = "option:nth-child(3)";
+                break;
+            case "Divide":
+                operatorCSS = "option:nth-child(2)";
+                break;
+        }
+        yield protractor_1.element(protractor_1.by.model('operator')).element(protractor_1.by.css(operatorCSS)).click().then(function () {
             return __awaiter(this, void 0, void 0, function* () {
                 console.log("[3] Operator Selected");
             });
@@ -68,6 +76,7 @@ cucumber_1.When('Select operator from dropdown', function () {
 });
 cucumber_1.When('Enter second number in Second Box', function () {
     return __awaiter(this, void 0, void 0, function* () {
+        secondValue = key2["secondNum"];
         yield protractor_1.element(protractor_1.by.model('second')).sendKeys(secondValue).then(function () {
             return __awaiter(this, void 0, void 0, function* () {
                 yield protractor_1.browser.sleep(1000);
@@ -88,4 +97,4 @@ cucumber_1.Then('Answer is Displayed', function () {
         yield console.log("[6] Answer Displayed");
     });
 });
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlyc3RQcm90cmFjdG9yLnN0ZXBzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3RlcHNEZWZpbml0aW9uL2ZpcnN0UHJvdHJhY3Rvci5zdGVwcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUFBLHVDQUE0RTtBQUM1RSwyQ0FBd0Q7QUFDeEQsb0RBQStDO0FBRS9DLElBQUksU0FBUyxFQUFDLFNBQVMsRUFBQyxTQUFTLENBQUM7QUFDbEMsSUFBSSxVQUFVLEVBQUMsV0FBVyxFQUFDLFdBQVcsQ0FBQztBQUN2QyxJQUFJLENBQUMsR0FBQyxDQUFDLENBQUM7QUFDUixjQUFjO0FBRWQsb0JBQVMsQ0FBQzs7UUFDUixNQUFNLG9CQUFPLENBQUMsR0FBRyxDQUFDLDJDQUEyQyxDQUFDLENBQUM7SUFDakUsQ0FBQztDQUFBLENBQUMsQ0FBQztBQUVILGlCQUFNLENBQUM7O1FBQ0wsSUFBSSxHQUFHLEdBQUcsSUFBSSxtQkFBTyxFQUFFLENBQUM7UUFDeEIsSUFBSSxNQUFNLEdBQVUsTUFBTSxHQUFHLENBQUMsWUFBWSxDQUFDLDJFQUEyRSxDQUFDLENBQUM7UUFDeEgsSUFBSSxFQUFFLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUU1QixTQUFTLEdBQUcsRUFBRSxDQUFDLGlCQUFpQixDQUFDLGdCQUFnQixDQUFDO1FBQ2xELFNBQVMsR0FBRyxFQUFFLENBQUMsaUJBQWlCLENBQUMsY0FBYyxDQUFDO1FBQ2hELFNBQVMsR0FBRyxFQUFFLENBQUMsaUJBQWlCLENBQUMsY0FBYyxDQUFDO1FBRWxELElBQUksU0FBUyxHQUFHLENBQUMsU0FBUyxFQUFFLFNBQVMsRUFBRSxTQUFTLENBQUMsQ0FBQztRQUVsRCxLQUFLLElBQUksSUFBSSxJQUFJLFNBQVMsRUFBRTtZQUMxQixPQUFPLENBQUMsR0FBRyxDQUFDLGVBQWUsR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDLENBQUM7WUFDN0MsT0FBTyxDQUFDLEdBQUcsQ0FBQyxnQkFBZ0IsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7WUFDL0MsT0FBTyxDQUFDLEdBQUcsQ0FBQyxnQkFBZ0IsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7WUFDL0MsMERBQTBEO1lBQzFELDREQUE0RDtZQUM1RCw0REFBNEQ7WUFDNUQsSUFBSSxFQUFFLENBQUM7WUFDUCxNQUFNO1NBQ1A7SUFDRCxDQUFDO0NBQUEsQ0FBQyxDQUFDO0FBRUgsZ0JBQUssQ0FBQyw0Q0FBNEMsRUFBRTs7UUFDaEQsTUFBTSxPQUFPLENBQUMsR0FBRyxDQUFDLG1FQUFtRSxDQUFDLENBQUM7SUFDMUYsQ0FBQztDQUFBLENBQUMsQ0FBQztBQUVGLGVBQUksQ0FBQyxpQ0FBaUMsRUFBRTs7UUFDdEMsTUFBTSxvQkFBTyxDQUFDLGVBQUUsQ0FBQyxLQUFLLENBQUMsT0FBTyxDQUFDLENBQUMsQ0FBQyxRQUFRLENBQUMsVUFBVSxDQUFDLENBQUMsSUFBSSxDQUFDOztnQkFDekQsb0JBQU8sQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBQ3JCLE1BQU0sT0FBTyxDQUFDLEdBQUcsQ0FBQywyQkFBMkIsQ0FBQyxDQUFDO1lBQ2pELENBQUM7U0FBQSxDQUFDLENBQUM7SUFDSixDQUFDO0NBQUEsQ0FBQyxDQUFDO0FBRUgsZUFBSSxDQUFDLCtCQUErQixFQUFFOztRQUNsQyxNQUFNLG9CQUFPLENBQUMsZUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxlQUFFLENBQUMsR0FBRyxDQUFDLHFCQUFxQixDQUFDLENBQUMsQ0FBQyxLQUFLLEVBQUUsQ0FBQyxJQUFJLENBQUM7O2dCQUNwRixPQUFPLENBQUMsR0FBRyxDQUFDLHVCQUF1QixDQUFDLENBQUM7WUFDekMsQ0FBQztTQUFBLENBQUMsQ0FBQztJQUNMLENBQUM7Q0FBQSxDQUFDLENBQUM7QUFFTCxlQUFJLENBQUMsbUNBQW1DLEVBQUU7O1FBQ3hDLE1BQU0sb0JBQU8sQ0FBQyxlQUFFLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsUUFBUSxDQUFDLFdBQVcsQ0FBQyxDQUFDLElBQUksQ0FBQzs7Z0JBQzNELE1BQU0sb0JBQU8sQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7Z0JBQzFCLE9BQU8sQ0FBQyxHQUFHLENBQUMsNEJBQTRCLENBQUMsQ0FBQztZQUM5QyxDQUFDO1NBQUEsQ0FBQyxDQUFDO0lBQ0gsQ0FBQztDQUFBLENBQUMsQ0FBQztBQUVILGVBQUksQ0FBQyxpQkFBaUIsRUFBRTs7UUFDdEIsTUFBTSxvQkFBTyxDQUFDLGVBQUUsQ0FBQyxFQUFFLENBQUMsVUFBVSxDQUFDLENBQUMsQ0FBQyxLQUFLLEVBQUUsQ0FBQyxJQUFJLENBQUM7WUFDNUMsT0FBTyxDQUFDLEdBQUcsQ0FBQyx1QkFBdUIsQ0FBQyxDQUFDO1FBQ3JDLENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztDQUFBLENBQUMsQ0FBQztBQUVILGVBQUksQ0FBQyxxQkFBcUIsRUFBRTs7UUFDekIsTUFBTSxPQUFPLENBQUMsR0FBRyxDQUFDLHNCQUFzQixDQUFDLENBQUM7SUFDN0MsQ0FBQztDQUFBLENBQUMsQ0FBQyJ9
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmlyc3RQcm90cmFjdG9yLnN0ZXBzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vc3RlcHNEZWZpbml0aW9uL2ZpcnN0UHJvdHJhY3Rvci5zdGVwcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUFBLHVDQUE0RTtBQUM1RSwyQ0FBd0Q7QUFDeEQsb0RBQStDO0FBRS9DLElBQUksUUFBUSxDQUFDO0FBQ2IsSUFBSSxJQUFJLENBQUM7QUFDVCxJQUFJLElBQUksQ0FBQztBQUNULElBQUksTUFBTSxHQUFVLEVBQUUsQ0FBQztBQUN2QixJQUFJLFdBQVcsQ0FBQztBQUNoQixJQUFJLFlBQVksQ0FBQztBQUNqQixJQUFJLFVBQVUsQ0FBQztBQUNmLElBQUksY0FBYyxDQUFDO0FBQ25CLElBQUksV0FBVyxDQUFDO0FBRWhCLG9CQUFTLENBQUM7O1FBQ1IsTUFBTSxvQkFBTyxDQUFDLEdBQUcsQ0FBQywyQ0FBMkMsQ0FBQyxDQUFDO1FBQy9ELElBQUksR0FBRyxHQUFHLElBQUksbUJBQU8sRUFBRSxDQUFDO1FBQ3hCLE1BQU0sR0FBRyxNQUFNLEdBQUcsQ0FBQyxZQUFZLENBQUMsMkVBQTJFLENBQUMsQ0FBQztRQUM3RyxRQUFRLEdBQUcsSUFBSSxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUMsQ0FBQztJQUNoQyxDQUFDO0NBQUEsQ0FBQyxDQUFDO0FBRUgsaUJBQU0sQ0FBQyxDQUFDLFFBQVEsRUFBRSxFQUFFO0lBQ2xCLFdBQVcsR0FBRyxtQkFBbUIsQ0FBQztJQUNsQyxZQUFZLEdBQUcsUUFBUSxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUM7SUFDcEMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxZQUFZLENBQUMsQ0FBQztJQUMxQixJQUFJLEdBQUcsUUFBUSxDQUFDLFdBQVcsQ0FBQyxDQUFDO0lBQzdCLElBQUksR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDLENBQUM7QUFDNUIsQ0FBQyxDQUFDLENBQUM7QUFFSCxnQkFBSyxD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
