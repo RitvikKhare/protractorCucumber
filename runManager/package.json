@@ -1,0 +1,16 @@
+{
+  "name": "runmanager",
+  "version": "1.0.0",
+  "description": "To automate the master run sheet of the test cases",
+  "main": "runSheetManager.js",
+  "scripts": {
+    "test": "node runSheetManager.js",
+    "build-code":"tsc -w"
+  },
+  "keywords": [
+    "Excel"
+  ],
+  "author": "Puneet",
+  "license": "ISC"
+  
+}
