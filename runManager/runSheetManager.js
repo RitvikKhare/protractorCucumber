@@ -5,21 +5,32 @@ var new_1 = require("./new");
 var wb = new exceljs_1.Workbook();
 wb.xlsx.readFile("./RunSheet_Date.xlsx").then(function () {
     var sheet = wb.getWorksheet("Results");
-    sheet.getRow(4).getCell(2).value = "Passed";
-    wb.xlsx.writeFile('./RunSheet_Date.xlsx');
-    for (var i = 2; i <= sheet.rowCount; i++) {
+    var _loop_1 = function (i) {
         if (sheet.getRow(i).getCell(2).value == "Passed") {
         }
-    }
-    for (var i = 2; i <= sheet.rowCount; i++) {
-        if (sheet.getRow(i).getCell(2).value == "" || sheet.getRow(i).getCell(2).value == "Failed") {
+        else {
+            var obj = new new_1.GetFiles();
+            var excel_file = obj.readExcelFile();
+            wb.xlsx.readFile(excel_file).then(function () {
+                var sheet1 = wb.getWorksheet("Result_Summary");
+                for (var j = 2; j <= sheet1.rowCount; j++) {
+                    if (sheet.getRow(i).getCell(1).value == sheet1.getRow(j).getCell(2).value) {
+                        if (sheet1.getRow(j).getCell(7).value == "Passed") {
+                            sheet.getRow(i).getCell(2).value = "Passed";
+                            wb.xlsx.writeFile('./RunSheet_Date.xlsx');
+                        }
+                        else {
+                            break;
+                        }
+                    }
+                    else {
+                        continue;
+                    }
+                }
+            });
         }
+    };
+    for (var i = 2; i <= sheet.rowCount; i++) {
+        _loop_1(i);
     }
-    var obj = new new_1.GetFiles();
-    var excel_file = obj.readExcelFile();
-    console.log(excel_file);
-    wb.xlsx.readFile(excel_file).then(function () {
-        var sheet1 = wb.getWorksheet("Result_Summary");
-        console.log(sheet1.getRow(2).getCell(3).value);
-    });
 });
