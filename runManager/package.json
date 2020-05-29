@@ -5,12 +5,14 @@
   "main": "runSheetManager.js",
   "scripts": {
     "test": "node runSheetManager.js",
-    "build-code":"tsc -w"
+    "build-code": "tsc -w"
   },
   "keywords": [
     "Excel"
   ],
   "author": "Puneet",
-  "license": "ISC"
-  
+  "license": "ISC",
+  "dependencies": {
+    "xls-to-json": "^0.5.4"
+  }
 }

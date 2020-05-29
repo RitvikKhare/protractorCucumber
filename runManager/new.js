@@ -1,17 +1,36 @@
 "use strict";
 exports.__esModule = true;
 var fs = require('fs');
-var path = require('path');
-var folderPath = 'Alok/Results/Regression/Run_10-Apr-2020_07-01-01_PM/Excel Results';
-var GetFiles = /** @class */ (function () {
-    function GetFiles() {
+//const path = require('path')
+//const folderPath = 'Alok/Results/Regression/Run_10-Apr-2020_07-01-01_PM/Excel Results';
+// const node_xj = require("xls-to-json");
+//   node_xj({
+//     input: "Alok/Results/Regression/Run_10-Apr-2020_07-01-01_PM/Excel Results/Summary.xls",  // input xls
+//     output: "Alok/Results/Regression/Run_10-Apr-2020_07-01-01_PM/Excel Results/output.json", // output json
+//     sheet: "Result_Summary",  // specific sheetname
+//   }, function(err, result) {
+//     if(err) {
+//       console.error(err);
+//     } else {
+//       //console.log(result[0]["Test_Case"]);
+//     }
+//   });
+var GetJson = /** @class */ (function () {
+    function GetJson() {
     }
-    GetFiles.prototype.readExcelFile = function () {
-        var fileContent = fs.readdirSync(folderPath);
-        var fileMain = path.join(folderPath, 'Summary.xlsx');
-        return fileMain;
+    GetJson.prototype.readJsonFile = function (filePath) {
+        var fileContent = fs.readFileSync(filePath);
+        var jsonContent = JSON.parse(fileContent);
+        return jsonContent;
     };
-    return GetFiles;
+    return GetJson;
 }());
-exports.GetFiles = GetFiles;
+exports.GetJson = GetJson;
 ;
+/*export class GetFiles {
+     readExcelFile (){
+     let fileContent =  fs.readdirSync(folderPath);
+     let fileMain = path.join(folderPath, 'Summary.xls');
+     return fileMain;
+    }
+};*/
