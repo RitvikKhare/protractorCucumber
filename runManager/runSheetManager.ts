@@ -1,7 +1,11 @@
 import {Workbook, Worksheet, Row, Cell} from 'exceljs';
 import { GetJson } from './new';
-import {node_xj } from 'xls-to-json';
+const node_xj =require ('xls-to-json');
 
+class trialClass{
+
+async tryConvertingFunction()
+{
 node_xj({
     input: "Alok/Results/Regression/Run_10-Apr-2020_05-01-01_PM/Excel Results/Summary.xls",  // input xls
     output: "Alok/Results/Regression/Run_10-Apr-2020_05-01-01_PM/Excel Results/output.json", // output json
@@ -13,12 +17,15 @@ node_xj({
       console.log(result);
     }
 });
+await console.log("converting function to xls to json");
+} 
 
-var jsonst:string = "";
+async UpdateResultFunction(){
+let jsonst:string = "";
 let wb:Workbook = new Workbook();
 
 let obj = new GetJson();
-jsonst =   obj.readJsonFile("Alok/Results/Regression/Run_10-Apr-2020_05-01-01_PM/Excel Results/output.json");
+jsonst =  obj.readJsonFile("Alok/Results/Regression/Run_10-Apr-2020_05-01-01_PM/Excel Results/output.json");
 
 wb.xlsx.readFile("./RunSheet_Date.xlsx").then(function(){
     let sheet:Worksheet = wb.getWorksheet("Results");
@@ -52,3 +59,10 @@ wb.xlsx.readFile("./RunSheet_Date.xlsx").then(function(){
         }
     }
 });
+await console.log("UpdateResultFunction function to xls to json");
+}
+}
+
+const newObject =new trialClass();
+newObject.tryConvertingFunction();
+newObject.UpdateResultFunction();
