@@ -117,5 +117,4 @@ var trialClass = /** @class */ (function () {
     return trialClass;
 }());
 var newObject = new trialClass();
-newObject.tryConvertingFunction();
 newObject.UpdateResultFunction();
