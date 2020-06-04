@@ -64,5 +64,4 @@ await console.log("UpdateResultFunction function to xls to json");
 }
 
 const newObject =new trialClass();
-newObject.tryConvertingFunction();
 newObject.UpdateResultFunction();
