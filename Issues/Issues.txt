@@ -7,4 +7,3 @@ Issues in runManager folder
    
 2. I have created and able to run and make changes for the one folder only example- alok
    but no idea how to execute my code for different folders like alok, prajakta, ritvik and so on...
-
