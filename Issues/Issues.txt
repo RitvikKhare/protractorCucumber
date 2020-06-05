@@ -1,8 +1,10 @@
-Issues in Scenario outline folder in  tsScripts in step definition
+Issues in runManager folder
 
-1. Javascript executor function not working placed in After function
-   Error- Click control problem in between go button and executor function.
+1. not able to fetch my output.json on the first time execution, but on the second time i am getting it.
+   Error- on the first execution it's says output.json file not present but it actually created and it's not able to fetch before the        second function execution present in runSheetManager.ts.
+   I have called the first function in the sample.ts
+   and the json file for the second function has been called from test.ts
+   
+2. I have created and able to run and make changes for the one folder only example- alok
+   but no idea how to execute my code for different folders like alok, prajakta, ritvik and so on...
 
-Issues in testingJson folder in tsScripts
-
-1. Showing zero scenarios still after adding testingData.json file and utilities.ts file.
