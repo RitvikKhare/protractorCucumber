@@ -13,7 +13,7 @@
   "author": "Puneet",
   "license": "ISC",
   "dependencies": {
-    "xls-to-json": "^0.5.4",
+    "xls-to-json": "^2.1.1",
     "exceljs": "^3.9.0"
   }
 }
