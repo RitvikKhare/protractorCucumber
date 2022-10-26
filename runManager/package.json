@@ -14,6 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "xls-to-json": "^0.5.4",
-    "exceljs": "^3.9.0"
+    "exceljs": "^3.10.0"
   }
 }
